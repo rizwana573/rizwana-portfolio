@@ -14,15 +14,12 @@
     position: absolute;
   top: 0;
   left: 0;
-  z-index: 0; /* keep behind content but clickable */
-  pointer-events: none; /* let content get clicks */
+  z-index: 0;
+  pointer-events: none; 
 
 }
 
 #particles-js canvas {
-  /* width: 100% !important;
-  height: 100% !important;
-  display: block; */
   pointer-events: all;
 }
 

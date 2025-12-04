@@ -4,7 +4,7 @@ import RBLogo from "../icons/RBLogo";
 export default function Hero({ onAboutClick, onLatestWorksClick }) {
   return (
     <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden">
-        <ParticlesBg />
+        <ParticlesBg/>
 
       <div className="relative z-10">
         <RBLogo />
