@@ -9,8 +9,8 @@ import Mail from "../icons/Mail";
 export default function Header() {
    const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <header className="z-10 flex items-center justify-between w-full px-6 mt-4 max-w-screen-xl mx-auto relative">
-      <Logo fill={theme === "dark" ? "#fff" : "#000"} className="h-12 w-12" />
+    <header className="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-50">
+      <Logo fill={theme === "dark" ? "#fff" : "#000"} className="w-10 h-10 md:w-14 md:h-14" />
       <div className="flex gap-4 pointer-events-auto items-center">
         <div className="cursor-pointer z-10">
           <button

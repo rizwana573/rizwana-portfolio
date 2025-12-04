@@ -1,57 +1,51 @@
-import { useCallback } from "react";
-import { Particles } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Points, PointMaterial } from "@react-three/drei";
+import { useRef, useMemo } from "react";
+import * as THREE from "three";
 
-export default function ParticlesBg({ theme = "dark" }) {
-  const particlesInit = useCallback(async (engine) => {
-    await loadSlim(engine);
+// This component MUST run inside the Canvas
+function ParticlePoints({ theme }) {
+  const particlesRef = useRef();
+
+  // Generate particle positions once
+  const positions = useMemo(() => {
+    const arr = new Float32Array(3000 * 3);
+    for (let i = 0; i < 3000; i++) {
+      arr[i * 3 + 0] = (Math.random() - 0.5) * 6;
+      arr[i * 3 + 1] = (Math.random() - 0.5) * 6;
+      arr[i * 3 + 2] = (Math.random() - 0.5) * 6;
+    }
+    return arr;
   }, []);
 
-  const config = {
-    particles: {
-      number: { value: 100 },
-      color: {
-        value:
-          theme === "dark"
-            ? ["#FF0000", "#FF7F00", "#FFFF00", "#00FF00", "#0000FF", "#4B0082", "#8B00FF"]
-            : ["#222", "#444", "#666"],
-      },
-      shape: { type: ["triangle", "polygon", "star"] },
-      opacity: { value: 0.7 },
-      size: { value: 4, random: true },
-      links: {
-        enable: true,
-        distance: 150,
-        color: theme === "dark" ? "#999999" : "#444444",
-        opacity: 0.6,
-        width: 2,
-      },
-      move: {
-        enable: true,
-        speed: 3,
-        direction: "none",
-        random: false,
-        straight: false,
-        outModes: "out",
-      },
-    },
-    interactivity: {
-      events: {
-        onHover: { enable: true, mode: "repulse" },
-        onClick: { enable: true, mode: "push" },
-      },
-      modes: {
-        repulse: { distance: 120, duration: 0.4 },
-        push: { quantity: 6 },
-      },
-    },
-    fullScreen: { enable: false },
-    detectRetina: true,
-  };
+  // Mouse reactive rotation
+  useFrame(({ mouse }) => {
+    if (!particlesRef.current) return;
+    particlesRef.current.rotation.y = mouse.x * 0.4;
+    particlesRef.current.rotation.x = mouse.y * 0.4;
+    particlesRef.current.rotation.z += 0.0015; 
+  });
 
   return (
-    <div className="absolute inset-0 -z-10 h-full w-full">
-      <Particles id="tsparticles" init={particlesInit} options={config} />
+    <Points ref={particlesRef} positions={positions} stride={3}>
+      <PointMaterial
+        size={0.015}
+        sizeAttenuation
+        transparent
+        depthWrite={false}
+        color={theme === "dark" ? "#ffffff" : "#444444"}
+      />
+    </Points>
+  );
+}
+
+// Wrapper Component (NO Three.js hooks here)
+export default function ParticlesBg({ theme }) {
+  return (
+    <div className="absolute inset-0 -z-10">
+      <Canvas camera={{ position: [0, 0, 2.7] }}>
+        <ParticlePoints theme={theme} />
+      </Canvas>
     </div>
   );
 }
