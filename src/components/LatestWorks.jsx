@@ -38,7 +38,7 @@ export default function LatestWorks() {
             </span>
             <img
               className="mr-auto w-[400px]"
-              src="../src/assets/expenseTracker.png"
+              src="../public/assets/expenseTracker.png"
               alt="Expense Tracker App"
             />
           </a>
@@ -132,7 +132,7 @@ export default function LatestWorks() {
             </span>
             <img
               className="ml-auto w-[400px]"
-              src="../src/assets/countriesApp.png"
+              src="../public/assets/countriesApp.png"
               alt="Countries Explorer App"
             />
           </a>
@@ -148,7 +148,7 @@ export default function LatestWorks() {
             <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl">
               <img
                 className="mr-auto w-full h-full object-cover"
-                src="../src/assets/pressingPlay.png"
+                src="../public/assets/pressingPlay.png"
                 alt="Ed Sheeran Pressing Play Game"
               />
             </div>
@@ -258,7 +258,7 @@ export default function LatestWorks() {
             <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl">
               <img
                 className="mr-auto w-full h-full object-cover"
-                src="../src/assets/rksband.png"
+                src="../public/assets/rksband.png"
                 alt="RKS band site"
               />
             </div>
@@ -292,7 +292,7 @@ export default function LatestWorks() {
             <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl">
               <img
                 className="mr-auto w-full h-full object-cover"
-               src="../src/assets/yaelokre.png"
+               src="../public/assets/yaelokre.png"
                 alt="Yaelokre site image"
               />
             </div>
@@ -378,7 +378,7 @@ export default function LatestWorks() {
             <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl">
               <img
                 className="mr-auto w-full h-full object-cover"
-                src="../src/assets/yaelokre.png"
+                src="../public/assets/yaelokre.png"
                 alt="Yaelokre site image"
               />
             </div>
