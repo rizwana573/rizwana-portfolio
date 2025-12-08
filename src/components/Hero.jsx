@@ -3,13 +3,13 @@ import RBLogo from "../icons/RBLogo";
 
 export default function Hero({ onAboutClick, onLatestWorksClick }) {
   return (
-    <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden">
-        <ParticlesBg/>
+    <section className="relative h-screen w-full overflow-hidden flex flex-col justify-center items-center">
+      <ParticlesBg />
 
       <div className="relative z-10">
         <RBLogo />
 
-        <div className="relative z-10 text-center">
+        <div className="relative z-10 text-left">
           <h1 className="pointer-events-none text-4xl md:text-[64px] font-['Spartan']">
             Rizwana&nbsp;Begum
           </h1>
@@ -28,18 +28,19 @@ export default function Hero({ onAboutClick, onLatestWorksClick }) {
           >
             About Me
           </button>
-
-          <button
-            onClick={onLatestWorksClick}
-            className="mt-6 relative py-2 px-5 rounded font-extrabold 
+        </div>
+      </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+        <button
+          onClick={onLatestWorksClick}
+          className="mt-6 relative py-2 px-5 rounded font-extrabold 
                      bg-gradient-to-r from-yellow-500 via-orange-500 to-red-600 
                      bg-[length:200%_200%] animate-gradient cursor-pointer 
                      transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,100,0,0.8)] 
                      hover:scale-110"
-          >
-            Latest Works
-          </button>
-        </div>
+        >
+          Latest Works
+        </button>
       </div>
     </section>
   );

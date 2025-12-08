@@ -63,7 +63,7 @@
         transform: scale(1.1);
     }
 .work-section a:hover .visit-site-1,  .work-section a:hover .visit-site-2{
-        top: -2em;
+        top: -3.05em;
     }
     .lightMode {
         background: #fff;
