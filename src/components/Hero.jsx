@@ -1,5 +1,7 @@
 import ParticlesBg from "./ParticlesBg";
 import RBLogo from "../icons/RBLogo";
+import DownArrow from "../icons/DownArrow";
+import NextArrow from "../icons/NextArrow";
 
 export default function Hero({ onAboutClick, onLatestWorksClick }) {
   return (
@@ -26,11 +28,11 @@ export default function Hero({ onAboutClick, onLatestWorksClick }) {
                      transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,100,0,0.8)] 
                      hover:scale-110"
           >
-            About Me
+            About Me <NextArrow />
           </button>
         </div>
       </div>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10">
         <button
           onClick={onLatestWorksClick}
           className="mt-6 relative py-2 px-5 rounded font-extrabold 
@@ -39,7 +41,7 @@ export default function Hero({ onAboutClick, onLatestWorksClick }) {
                      transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,100,0,0.8)] 
                      hover:scale-110"
         >
-          Latest Works
+          Latest Works <DownArrow />
         </button>
       </div>
     </section>

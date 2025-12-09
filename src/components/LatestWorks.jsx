@@ -1,3 +1,5 @@
+import ExternalLinkIcon from "../icons/ExternalLinkIcon";
+
 export default function LatestWorks() {
   return (
     <>
@@ -9,8 +11,8 @@ export default function LatestWorks() {
           Latest Works
         </h2>
         {/* Expense Tracker */}
-        <div className="gap-[300px] mt-20 grid grid-cols-1 md:grid-cols-2 relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-yellow-300 to-orange-600"></div>
+        <div className="gap-[300px] mt-20 grid grid-cols-1 md:grid-cols-2 relative max-md:gap-[35px]">
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-yellow-300 to-orange-600  max-md:hidden"></div>
 
           <a
             href="https://rizz-expense-tracker.netlify.app/"
@@ -19,22 +21,7 @@ export default function LatestWorks() {
           >
             <span className="visit-site-2">
               Expense Tracker
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-external-link"
-              >
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
+              <ExternalLinkIcon />
             </span>
             <img
               className="mr-auto w-[400px]"
@@ -74,8 +61,9 @@ export default function LatestWorks() {
         </div>
 
         {/* Countries Explorer */}
-        <div className="gap-[300px] mt-20 grid grid-cols-1 md:grid-cols-2 relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-orange-500 to-red-600"></div>
+        <div className="gap-[300px] mt-20 grid grid-cols-1 md:grid-cols-2 relative max-md:gap-[35px] max-md:flex max-md:flex-col-reverse">
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-orange-500 to-red-600
+          max-md:hidden"></div>
 
           <div className="w-full">
             <h3 className="text-[#fc815ce3] font-bold text-4xl">
@@ -113,22 +101,7 @@ export default function LatestWorks() {
           >
             <span className="visit-site-1">
               Countries Explorer
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-external-link"
-              >
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
+              <ExternalLinkIcon />
             </span>
             <img
               className="ml-auto w-[400px]"
@@ -137,9 +110,10 @@ export default function LatestWorks() {
             />
           </a>
         </div>
-
-        <div className="gap-[300px] mt-20 grid grid-cols-1 md:grid-cols-2 relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-orange-500 to-red-600"></div>
+         {/* Edsheeran  */}
+        <div className="gap-[300px] mt-20 grid grid-cols-1 md:grid-cols-2 relative max-md:gap-[35px]">
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b  from-yellow-300 to-orange-600
+          max-md:hidden"></div>
           <a
             href="https://www.edsheeran.com/pressingplay"
             target="_blank"
@@ -155,22 +129,7 @@ export default function LatestWorks() {
 
             <span className="visit-site-1">
               Edsheeran
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-external-link"
-              >
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
+              <ExternalLinkIcon />
             </span>
           </a>
 
@@ -203,8 +162,8 @@ export default function LatestWorks() {
             </ul>
           </div>
         </div>
-        <div className="gap-[300px] mt-20 grid grid-cols-1 md:grid-cols-2 relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-yellow-300 to-orange-600"></div>
+        <div className="gap-[300px] mt-20 grid grid-cols-1 md:grid-cols-2 relative max-md:gap-[35px] max-md:flex max-md:flex-col-reverse">
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b  from-orange-500 to-red-600 max-md:hidden"></div>
           <div className="w-full">
             <h3 className="text-[#ffe578] font-bold text-4xl">RKS Band</h3>
             <span className="text-[#ffe578] text-lg">Artist website</span>
@@ -238,22 +197,7 @@ export default function LatestWorks() {
           >
             <span className="visit-site-2">
               RKS Band
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-external-link"
-              >
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
+              <ExternalLinkIcon />
             </span>
             <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl">
               <img
@@ -264,30 +208,16 @@ export default function LatestWorks() {
             </div>
           </a>
         </div>
-        <div className="gap-[300px] mt-20 grid grid-cols-1 md:grid-cols-2 relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-orange-500 to-red-600"></div>
+        <div className="gap-[300px] mt-20 grid grid-cols-1 md:grid-cols-2 relative max-md:gap-[35px]">
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-yellow-300 to-orange-600
+           max-md:hidden"></div>
           <a
             href="https://www.yaelokre.com/"
             className="w-full relative content-center"
           >
             <span className="visit-site-1">
               Yaelokre
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-external-link"
-              >
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
+              <ExternalLinkIcon />
             </span>
             <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl">
               <img
@@ -358,22 +288,7 @@ export default function LatestWorks() {
           >
             <span className="visit-site-2">
               Yaelokre
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-external-link"
-              >
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
+              <ExternalLinkIcon />
             </span>
             <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl">
               <img
